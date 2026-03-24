@@ -24,6 +24,24 @@
 
 ```
 
+### 실제 예시
+
+```
+feat: 로그인 기능 추가
+
+이메일/비밀번호 입력 후 로그인하는 기능을 구현
+
+Resolves: feature-42
+```
+
+```
+fix: 장바구니 수량 음수 버그 수정
+```
+
+```
+refactor: getUserInfo 함수 명 변경
+```
+
 # Git Flow
 
 https://medium.com/@yanminthwin/understanding-github-flow-and-git-flow-957bc6e12220

@@ -25,8 +25,32 @@
 
 ## GUI
 
-* ex) github desktop
-  ![002](/Users/1004790/workspace/git_practice/image/002.png)
+* 별도 프로그램 설치 없이 **시각적으로 Git 작업** 가능
+
+| 도구 | 특징 | 공식 URL |
+|------|------|----------|
+| **GitHub Desktop** | 입문자 친화적, 단순한 UI | https://desktop.github.com |
+| **SourceTree** | 무료, Atlassian 제공, 고급 기능 풍부 | https://www.sourcetreeapp.com |
+| **Fork** | 빠른 속도, 직관적 UI, Mac/Windows 지원 | https://git-fork.com |
+
+* GitHub Desktop
+
+  ![002](./image/002.png)
+
+* SourceTree
+
+  ![sourcetree](./image/sourcetree.png)
+
+* Fork
+
+  ![fork](./image/fork.png)
+
+* VSCode 확장기능을 활용하면 별도 도구 없이 에디터 안에서 Git 작업 가능
+
+  | 확장기능 | 설명 |
+  |----------|------|
+  | **GitLens** | 코드 라인별 커밋 작성자/시간 표시, 브랜치 비교 등 고급 기능 |
+  | **Git Graph** | 브랜치 그래프를 시각적으로 확인, GUI처럼 커밋 이력 탐색 |
 
 ## CLI
 

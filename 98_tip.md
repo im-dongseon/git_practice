@@ -23,6 +23,18 @@ git stash drop stash@{1}
 git stash clear
 ```
 
+* untracked 파일(새로 생성되었지만 아직 `git add` 하지 않은 파일)까지 함께 stash에 저장하려면
+
+```bash
+git stash -u
+```
+
+* stash로 저장한 내용을 새 브랜치로 바로 복원하려면 (충돌 없이 새로운 브랜치를 만들면서 적용)
+
+```bash
+git stash branch <branch-name>
+```
+
 # git commit --amend
 
 * **가장 최근에 만든 커밋을 수정**

@@ -1,16 +1,58 @@
 # 새로운 기능 개발 시작
 
-## Fork 
+## 1. 실습용 repo 준비
 
-* https://github.com/lim-dongsun/git_practice
+> 실습을 위한 개인 저장소를 만들고 초기화합니다.
 
-* [repo init 은 readme 파일 참고](./01_readme.md)
+```shell
+mkdir my_git_practice
+cd my_git_practice
+git init
+echo "# my git practice" >> README.md
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/{your-id}/my_git_practice.git
+git push -u origin main
+```
+
+---
+
+## 2. 작업 중인 변경 사항 되돌리기 (git restore)
+
+* **언제 사용?** `git add` 전/후 수정된 파일을 이전 상태로 되돌릴 때
+
+| 상황 | 명령어 |
+|------|--------|
+| 작업 중 파일을 마지막 커밋 상태로 되돌리기 (unstaged) | `git restore <file>` |
+| staged 상태인 파일을 unstaged로 되돌리기 | `git restore --staged <file>` |
+
+### 실습
+
+```shell
+# 1. 파일 수정 후 실수로 되돌리고 싶을 때
+echo "wrong content" >> README.md
+git restore README.md
+
+# 2. git add 한 파일을 unstaged로 되돌리고 싶을 때
+echo "test content" >> README.md
+git add README.md
+git restore --staged README.md
+```
+
+---
 
 ## 기능 단위 브랜치 생성
 
 ```bash
 git branch feature/add-profile
 git checkout feature/add-profile
+```
+
+* 또는 아래 명령어로 브랜치 생성과 이동을 한 번에 처리 가능
+
+```bash
+git checkout -b feature/add-profile
 ```
 
 ### 확인
