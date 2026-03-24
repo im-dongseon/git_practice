@@ -45,7 +45,20 @@ cd git_practice
 git clone https://github.com/{your-id}/git_practice.git .
 ```
 
+---
 
+## 3. 웹 브라우저에서 바로 실습하기 (GitHub Codespaces)
+
+* **개념**: 내 컴퓨터(로컬)에 Git이나 코드 에디터를 따로 설치하지 않고도, 웹 브라우저만 있으면 개발 환경과 터미널을 바로 띄울 수 있는 기능입니다.
+* **실행 방법**:
+  1. GitHub의 강의 자료(또는 파생된 Fork) 저장소에 접속합니다.
+  2. 우측 초록색 `<> Code` 버튼을 클릭합니다.
+  3. **Codespaces** 탭을 선택하고 `Create codespace on main`을 클릭합니다.
+* **장점**: 환경 구축(Node.js, 확장기능 등) 시간을 획기적으로 절약할 수 있으며, 장소에 구애받지 않고 어디서든 동일한 개발 환경으로 작업 가능합니다.
+
+![codespaces](./image/codespaces.png)
+
+---
 
 ## Personal access tokens (classic)
 

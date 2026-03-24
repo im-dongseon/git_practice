@@ -52,6 +52,25 @@
   | **GitLens** | 코드 라인별 커밋 작성자/시간 표시, 브랜치 비교 등 고급 기능 |
   | **Git Graph** | 브랜치 그래프를 시각적으로 확인, GUI처럼 커밋 이력 탐색 |
 
+---
+
+### 💡 AI 기반 효율화: GitHub Copilot 활용
+
+* **GitHub Copilot 이란?**
+  * 코드 자동 완성, AI 채팅, 각종 명령어 작성 및 Git 작업까지 도와주는 인공지능 코딩 어시스턴트입니다.
+
+* **설치 및 연동 방법**
+  1. VSCode 좌측 Extensions(확장, `Ctrl+Shift+X` / `Cmd+Shift+X`) 탭 클릭
+  2. 검색창에 `GitHub Copilot` 검색 후 📥 **Install** 클릭
+  3. 설치 완료 후 우측 하단 프롬프트를 따라 GitHub 계정 연동 (유료 구독 또는 평가판 필요)
+
+* **Git 작업 시 핵심 활용 (AI 커밋 로그램)**
+  * 변경 사항을 **Staged** 영역에 올린 뒤, 소스 제어(Source Control) 입력창 안의 **반짝이는 별(Sparkle) 아이콘 (`✨`)**을 클릭하세요.
+  * AI가 변경된 코드들을 분석해 적절한 **커밋 메시지(Commit Message)**를 자동으로 작성해 줍니다!
+  * 이를 활용하면 `Commit Message Rule`(feat, fix 등)을 훨씬 손쉽게 따를 수 있습니다.
+
+---
+
 ## CLI
 
 ```shell
