@@ -64,6 +64,7 @@ git clone https://github.com/{your-id}/git_practice.git .
 
 * GitHub는 보안상 비밀번호 대신 **Personal Access Token(PAT)**을 사용하여 인증
 * HTTPS로 push/pull 할 때 비밀번호 대신 PAT를 입력
+* 다만 이것은 여러 인증 방식 중 하나이며, 실제 개발 환경에서는 **SSH 키 방식**을 함께 많이 사용합니다.
 
 **발급 방법**
 1. GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
@@ -72,3 +73,7 @@ git clone https://github.com/{your-id}/git_practice.git .
 4. 생성된 토큰을 복사해두기 (다시 보기 불가)
 
 ![001](./image/001.png)
+
+---
+
+실습 환경 준비가 끝났다면, 다음 문서에서 **Git과 GitHub의 차이**, 그리고 Git의 기본 동작 구조부터 살펴보면 흐름이 자연스럽습니다.

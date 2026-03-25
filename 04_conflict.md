@@ -1,6 +1,7 @@
 # 충돌(conflict) 해결
 
 * 두 명이 같은 파일의 같은 부분을 수정하면 병합 시 충돌 발생
+* 아래 예시는 **현재 브랜치에서 다른 브랜치를 병합하거나(cherry-pick 포함) 변경을 가져오는 상황**을 단순화해서 보여줍니다.
 
 ```bash
 git merge main
@@ -128,3 +129,5 @@ git cherry-pick --abort
 ```bash
 git status
 ```
+
+* 충돌을 줄이고 커밋을 더 깔끔하게 정리하는 방법은 다음 문서 `05_rebase_squash.md` 에서 이어집니다.
