@@ -18,6 +18,7 @@
 ## 기본 사용법
 
 * `main` 브랜치의 최신 변경을 내 브랜치에 적용하려면
+* 이때 **현재 브랜치는 `main`이 아니라 내 작업 브랜치(feature 브랜치)** 여야 합니다.
 
 ```bash
 git switch feature/my-branch
@@ -120,3 +121,7 @@ git rebase -i HEAD~3
 # 5. 결과 확인
 git log --oneline
 ```
+
+---
+
+* 이미 만든 커밋이나 변경을 되돌려야 하는 경우는 다음 문서 `06_reset_revert.md` 에서 이어집니다.

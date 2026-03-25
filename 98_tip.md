@@ -1,5 +1,7 @@
 # git stash
 
+> 본편 학습 후 읽으면 좋은 실무 보조 기능 모음입니다.
+
 * **작업 중이던 변경사항(수정된 파일, 추가된 파일 등)을 임시로 저장해두고 작업 공간을 깨끗하게 리셋**
 * 보통 **다른 브랜치로 잠깐 이동하거나 긴급 이슈를 처리해야 할 때** 유용하게 사용
 * 현재 작업 중인 변경사항을 **스택에 저장(stash)** 후, 나중에 꺼내서(pop/apply) 이어서 작업할 수 있음
@@ -7,7 +9,7 @@
 
 ```bash
 git stash
-git stash save "작업 내용 설명"
+git stash push -m "작업 내용 설명"
 git stash list
 
 # 적용 + stash 삭제
@@ -52,6 +54,7 @@ git commit --amend -m "수정된 커밋 메시지"
 * ❗ 원격 저장소에 이미 push한 커밋을 amend하면?
   * git commit --amend는 **커밋 해시를 바꿔버리기 때문에**, 이미 원격에 푸시한 커밋을 amend하면 강제 푸시가 필요
   * 이미 다른 사람과 공유한 커밋이라면 이력이 꼬일 수 있으므로 특히 주의해야 함
+  * `git push --force-with-lease` 는 원격에 내가 모르는 새 변경이 생겼는지 한 번 더 확인한 뒤 push해서, `--force` 보다 더 안전합니다.
 
 ```bash
 git commit --amend
