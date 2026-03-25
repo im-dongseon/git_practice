@@ -29,6 +29,9 @@ git stash clear
 git stash -u
 ```
 
+* `git stash pop` 은 적용 후 stash 목록에서 제거하고, `git stash apply` 는 적용만 하고 목록은 남겨둡니다.
+* 둘 다 적용 과정에서 충돌이 날 수 있으므로, 중요한 작업 위에 바로 적용할 때는 현재 상태를 먼저 확인하는 것이 안전합니다.
+
 * stash로 저장한 내용을 새 브랜치로 바로 복원하려면 (충돌 없이 새로운 브랜치를 만들면서 적용)
 
 ```bash
@@ -47,11 +50,12 @@ git commit --amend -m "수정된 커밋 메시지"
 ```
 
 * ❗ 원격 저장소에 이미 push한 커밋을 amend하면?
-  * git commit --amend는 **커밋 해시를 바꿔버리기 때문에**, 이미 원격에 푸시한 커밋을 amend하면 **force push** 가 필요
+  * git commit --amend는 **커밋 해시를 바꿔버리기 때문에**, 이미 원격에 푸시한 커밋을 amend하면 강제 푸시가 필요
+  * 이미 다른 사람과 공유한 커밋이라면 이력이 꼬일 수 있으므로 특히 주의해야 함
 
 ```bash
 git commit --amend
-git push --force
+git push --force-with-lease
 ```
 
 * 커밋을 깔끔하게 관리할 때 유용

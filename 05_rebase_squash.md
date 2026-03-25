@@ -12,13 +12,15 @@
 * 내 브랜치의 커밋들을 **대상 브랜치의 최신 커밋 이후로 재배치**
 
   → 마치 원본에서 새로 작업을 시작한 것처럼 이력이 깔끔해짐
+* 단, rebase는 **기존 커밋을 다시 만드는 작업**이라 커밋 해시가 바뀌는 **이력 재작성(history rewrite)** 입니다.
+* 이미 다른 사람과 공유한 브랜치에서 무분별하게 rebase하면 협업 이력이 꼬일 수 있으므로, 보통은 **개인 브랜치** 또는 **PR 정리 단계**에서 주로 사용합니다.
 
 ## 기본 사용법
 
 * `main` 브랜치의 최신 변경을 내 브랜치에 적용하려면
 
 ```bash
-git checkout feature/my-branch
+git switch feature/my-branch
 git rebase main
 ```
 
@@ -48,6 +50,8 @@ git rebase --skip
 
 ## git rebase -i (Interactive Rebase)
 
+![010](./image/010.png)
+
 * 최근 N개의 커밋을 대화형으로 편집
 
 ```bash
@@ -74,10 +78,12 @@ pick abc3333 refactor: 불필요한 주석 제거
 
 ## git merge --squash
 
+![011](./image/011.png)
+
 * feature 브랜치의 모든 커밋을 **하나의 커밋으로 합쳐 현재 브랜치에 병합**
 
 ```bash
-git checkout main
+git switch main
 git merge --squash feature/add-profile
 git commit -m "feat: 프로필 기능 추가"
 ```
@@ -96,7 +102,7 @@ git commit -m "feat: 프로필 기능 추가"
 
 ```bash
 # 1. 실습용 브랜치 생성 후 커밋 3개 만들기
-git checkout -b practice/squash
+git switch -c practice/squash
 echo "A" >> test.txt && git add . && git commit -m "작업 A"
 echo "B" >> test.txt && git add . && git commit -m "작업 B"
 echo "C" >> test.txt && git add . && git commit -m "작업 C"
@@ -114,7 +120,3 @@ git rebase -i HEAD~3
 # 5. 결과 확인
 git log --oneline
 ```
-
-![010](./image/010.png)
-
-![011](./image/011.png)

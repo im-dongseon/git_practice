@@ -46,10 +46,16 @@ git restore --staged README.md
 
 ```bash
 git branch feature/add-profile
-git checkout feature/add-profile
+git switch feature/add-profile
 ```
 
 * 또는 아래 명령어로 브랜치 생성과 이동을 한 번에 처리 가능
+
+```bash
+git switch -c feature/add-profile
+```
+
+* 예전 방식 Git에서는 아래처럼 `git checkout`으로 브랜치 생성/이동을 함께 처리하기도 했습니다.
 
 ```bash
 git checkout -b feature/add-profile
@@ -113,12 +119,14 @@ git push origin feature/add-profile
 
 * 프론트엔드와 백엔드를 나누어 작업을 하고, 기능 테스트를 위해 통합
 
-* **서로 작업한 내역이 겹치거나 중복되는 부분**이 하나라도 있다면 **충돌**을 일으키므로 **각자의 영역을 철저하게 분리해서 작업** 필요
+* 서로 작업한 내역이 겹치면 **충돌(conflict)** 이 발생할 수 있음
+* 다만 충돌이 난다고 병합이 불가능한 것은 아니며, 최종 결과를 정리해서 해결한 뒤 계속 진행 가능
+* 역할이나 파일 범위를 나누어 작업하면 충돌 가능성을 줄일 수 있음
 
 #### 예시
 
 ```bash
-git checkout main
+git switch main
 git merge feature/login
 ```
 
@@ -133,7 +141,7 @@ git merge feature/login
 #### 예시
 
 ```bash
-git checkout main
+git switch main
 git cherry-pick abc1234
 ```
 
