@@ -42,11 +42,22 @@ fix: 장바구니 수량 음수 버그 수정
 refactor: getUserInfo 함수 명 변경
 ```
 
+* 본 강의 실습에서도 커밋 메시지를 작성할 때 위 규칙을 따라두면, 이후 PR 리뷰나 이력 확인이 훨씬 쉬워집니다.
+
 # Git Flow
 
 https://medium.com/@yanminthwin/understanding-github-flow-and-git-flow-957bc6e12220
 
 ![004](./image/004.webp)
+
+## 현재 강의 흐름과의 관계
+
+이 강의는 `develop`, `release`, `hotfix` 브랜치를 모두 두는 전통적인 **Git Flow**보다는, 기능 브랜치를 만들고 PR로 병합하는 **GitHub Flow / feature branch workflow**에 더 가깝습니다.
+
+- 현재 강의 흐름: `main` 기준으로 feature 브랜치를 만들고 작업 후 PR/merge
+- Git Flow: `main`, `develop`, `release`, `hotfix` 등 더 많은 브랜치 규칙을 운영
+
+즉, 이 강의는 먼저 **가볍고 실용적인 협업 흐름**을 익히는 데 초점을 두고, Git Flow는 이후 팀 규모나 배포 정책이 복잡할 때 참고하면 좋습니다.
 
 # 쉬어가는 이야기
 

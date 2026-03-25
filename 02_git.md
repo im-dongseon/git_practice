@@ -21,6 +21,34 @@
 
 * 회사에 따라서 Github, Gitlab, Gerrit, bitbucket 등 다양한 솔루션중에서 하나를 사용
 
+---
+
+# Git의 내부 구조
+
+Git 명령어를 잘 이해하려면 파일이 어느 단계에 있는지 먼저 알아두면 좋습니다.
+
+![git-internals](./image/git-internals.png)
+
+| 영역 | 의미 | 자주 쓰는 명령어 |
+|------|------|------------------|
+| Working Directory | 내가 현재 수정 중인 파일이 있는 작업 공간 | `git restore <file>`, `git add` |
+| Staging Area (Index) | 다음 커밋에 담을 변경사항을 고르는 임시 공간 | `git add`, `git restore --staged <file>` |
+| Local Repository | 커밋 이력이 저장되는 로컬 저장소 | `git commit`, `git reset`, `git revert` |
+
+간단히 흐름으로 보면 아래와 같습니다.
+
+```text
+Working Directory --(git add)--> Staging Area --(git commit)--> Local Repository
+```
+
+이 구조를 알고 나면 각 명령이 어디에 영향을 주는지 구분하기 쉬워집니다.
+
+- `git restore <file>`: 작업 중인 파일을 마지막 상태로 되돌림
+- `git restore --staged <file>`: staging area에서만 제외하고 작업 파일은 유지
+- `git reset`: 로컬 커밋 이력을 되돌림
+- `git revert`: 기존 커밋을 취소하는 새 커밋을 만듦
+- `git stash`: working directory와 staging area의 변경사항을 임시 보관
+
 # GUI vs CLI
 
 ## GUI
@@ -64,7 +92,7 @@
   2. 검색창에 `GitHub Copilot` 검색 후 📥 **Install** 클릭
   3. 설치 완료 후 우측 하단 프롬프트를 따라 GitHub 계정 연동 (유료 구독 또는 평가판 필요)
 
-* **Git 작업 시 핵심 활용 (AI 커밋 로그램)**
+* **Git 작업 시 핵심 활용 (AI 커밋 프로그램)**
   * 변경 사항을 **Staged** 영역에 올린 뒤, 소스 제어(Source Control) 입력창 안의 **반짝이는 별(Sparkle) 아이콘 (`✨`)**을 클릭하세요.
   * AI가 변경된 코드들을 분석해 적절한 **커밋 메시지(Commit Message)**를 자동으로 작성해 줍니다!
   * 이를 활용하면 `Commit Message Rule`(feat, fix 등)을 훨씬 손쉽게 따를 수 있습니다.
