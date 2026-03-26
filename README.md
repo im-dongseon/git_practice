@@ -7,3 +7,6 @@ this file is editer
 A
 B
 C
+A
+B
+C
