@@ -4,3 +4,6 @@ test
 
 asdasdasdasd
 this file is editer
+A
+B
+C
